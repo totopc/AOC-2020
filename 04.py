@@ -14,9 +14,7 @@ print("first " + str(valid))
 #part2
 
 valid=0
-with open ('input4.txt','r') as file:
-    infoData2 = [l for l in file.read().split('\n\n') ] 
-for line in infoData2:
+for line in infoData:
     if "byr" in line and "iyr" in line and "eyr" in line and "hgt" in line and "hcl" in line and "ecl" in line and  "pid" in line:
         byr = int(line[int(line.find("byr:")+4):int(line.find("byr:")+8)])
         iyr = int(line[int(line.find("iyr:")+4):int(line.find("iyr:")+8)])
