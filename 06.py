@@ -1,3 +1,4 @@
+#Part 1
 with open ('input6.txt','r' ) as reader:
     decList = [l.replace('\n', '') for l in reader.read().split('\n\n') ] 
     
@@ -13,6 +14,8 @@ for i in decList:
 
     
 print(total)
+
+#Part 2
 with open ('input6.txt','r' ) as reader:
     decList = [l for l in reader.read().split('\n\n') ] 
     
