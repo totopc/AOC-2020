@@ -1,4 +1,3 @@
-
 with open ('input5.txt','r' )as reader:
     rawList = [l for l in reader.read().split("\n")[:-1]]
     
@@ -17,12 +16,10 @@ def seat_id(initialList):
 #part 2
 def missing_id(idList):
     for i in idList:
-        if i+1 not in idList and id+2 in idList:
+        if i+1 not in idList and i+2 in idList:
             return i+1
     
 final_Id_List=[seat_id(seat) for seat in rawList]
 print(max(final_Id_List))
 
 print(missing_id(final_Id_List))
-
-
