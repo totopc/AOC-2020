@@ -18,7 +18,7 @@ def noLooping(yourList):
             num = int(b[b.find(' ')+2:])
             if op == "+":
                 acc = acc + num
-            elif op == "-":            
+            if op == "-":            
                 acc = acc - num
         if "jmp" in b:
             op = b[b.find(' ')+1:b.find(' ')+2]
@@ -39,6 +39,7 @@ def switcheroo(baseList):
             yourList  = [l for l in reader.read().split('\n')]
         iRow=yourList[i]
         childRan=[]
+        q=0
         acc=0         
         if "nop" in iRow and 0 != int(iRow[iRow.find(' ')+2:]) and  (iRow+str(i)) not in ran:
             ran.append(iRow +":"+str(i))
@@ -48,7 +49,6 @@ def switcheroo(baseList):
             ran.append(iRow + str(i))
             yourList[i]= 'nop ' + iRow[iRow.find(' ')+1:] 
         #Loop
-        q=0
         while q < len(yourList):
             b=yourList[q]
 
@@ -60,7 +60,7 @@ def switcheroo(baseList):
                 num = int(b[b.find(' ')+2:])
                 if op == "+":
                     acc = acc + num
-                elif op == "-":            
+                if op == "-":            
                     acc = acc - num
             if "jmp" in b:
                 op = b[b.find(' ')+1:b.find(' ')+2]
@@ -73,8 +73,6 @@ def switcheroo(baseList):
             if q == len(yourList):
                 return(acc)
         i += 1
-     
-    
 print(noLooping(bootCode))
 print(switcheroo(bootCode))   
 
