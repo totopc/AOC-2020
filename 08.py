@@ -76,5 +76,3 @@ def switcheroo(baseList):
 print(noLooping(bootCode))
 print(switcheroo(bootCode))   
 
-
-    
