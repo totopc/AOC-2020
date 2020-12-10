@@ -35,7 +35,3 @@ def daWei(aL):
     return arrWays[-1]
 print(sortAdaptors(adaptors))
 print(daWei(adapterSet))
-
-
-
-
