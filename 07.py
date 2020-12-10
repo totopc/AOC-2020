@@ -19,7 +19,7 @@ for i in bagInfo:
 def getGoldBag(gold):
     for gold in setChildBag[gold]:
         contains_gold.add(gold)
-        getColor(gold)
+        getGoldBag(gold)
         
 sg = "shiny gold"
 getGoldBag(sg)  
